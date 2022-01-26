@@ -12,12 +12,12 @@ SoftwareSerial serial(RX_PIN, TX_PIN); //Erstellen der Verbindung
 WiFiClient client; //Erstellen der WiFi Library
 
 //WiFi Setup
-const char* ssid = "WLAN_NAME"; //Name des drahtlosen Netzwerks
-const char* password = "WLAN_PASSWORT"; //Passwort des Netzwerks
+const char* ssid = "meine_ssid"; //Name des WLANs
+const char* password = "mein_passwort"; //Passwort des WLANs
 
 //ThingSpeak Setup
-const char* writeAPIkey = "WRITE_API_KEY"; //Key um Daten auf ThingSpeak hochzuladen
-const long int channelID = KANAL_ID; //ID des ThingSpeak Kanals
+const char* writeAPIkey = "writeAPIkey"; //Key um Daten auf ThingSpeak hochzuladen
+const long int channelID = *channelID*; //ID des ThingSpeak Kanals
 
 void setup() {
   serial.begin(BAUDRATE); //Verbindung mit dem Sensor erstellen
